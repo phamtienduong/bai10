@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let diemKiemTra = parseFloat(prompt("Nhập điểm bài kiểm tra:"));
+        let diemGiuaKy = parseFloat(prompt("Nhập điểm thi giữa kỳ:"));
+        let diemCuoiKy = parseFloat(prompt("Nhập điểm thi cuối kỳ:"));
+        if (isNaN(diemKiemTra) || isNaN(diemGiuaKy) || isNaN(diemCuoiKy)) {
+            console.log("Vui lòng nhập các điểm hợp lệ.");
+        } else {
+            let diemTrungBinh = (diemKiemTra + diemGiuaKy + diemCuoiKy) / 3;
+            if (diemTrungBinh >= 9) {
+                console.log("Học lực xuất sắc.");
+            } else if (diemTrungBinh >= 8) {
+                console.log("Học lực giỏi.");
+            } else if (diemTrungBinh >= 6.5) {
+                console.log("Học lực khá.");
+            } else if (diemTrungBinh >= 5) {
+                console.log("Học lực trung bình.");
+            } else {
+                console.log("Học lực yếu.");
+            }
+        }
+    </script>
+</body>
+</html>
